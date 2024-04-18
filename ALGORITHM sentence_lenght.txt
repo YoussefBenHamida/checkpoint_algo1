@@ -1,0 +1,25 @@
+ALGORITHM sentence_lenght
+VAR
+    length_s : INTEGER := 0
+    word : INTEGER := 0
+    vowels : INTEGER := 0
+    characters : CHAR := ''
+BEGIN
+read(characters)
+WHILE (characters<>'.') DO
+read(characters)
+
+    length_s += 1
+
+    IF (characters = ' ') THEN
+    word +=1
+    END_IF
+
+    IF (characters= 'a' || characters='e' || characters='i' || characters='o' || characters='u') THEN
+    vowels += 1
+    END_IF
+END_WHILE
+write (length_s)
+write (word)
+write(vowels)
+END
